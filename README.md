@@ -51,6 +51,6 @@ java -cp bin Main decode output.png myPassword
 
 ## Limitations
 * **PNG Only:** This only works with `.png` files. JPEGs use compression that messes up the pixel data, which destroys the hidden message.
-* **No Transparency:** To make the math easier and safer, the tool converts images to a solid RGB format.
+* **No Transparency:** Because of how the Alpha channel works in PNGs, if you use a PNG with actual transparency, the Decryption and Encryption is prone to glitch and not work. For 100% Success Rate, use non-transparent PNGs.
 * **Compression:** If you send the encrypted message through a medium that compresses it, the message will get lost. 
 * If you have suggestions how to increase the functionality and remove the limitations, feel free to share!
